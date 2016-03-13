@@ -1,5 +1,5 @@
-//Динамическое поключение библиотек
-//dll для функции "+"
+//Р”РёРЅР°РјРёС‡РµСЃРєРѕРµ РїРѕРєР»СЋС‡РµРЅРёРµ Р±РёР±Р»РёРѕС‚РµРє
+//dll РґР»СЏ С„СѓРЅРєС†РёРё "+"
 library DLLSuma;
 uses
   SysUtils,
@@ -14,7 +14,7 @@ exports Plus;
 begin
 end.
 
-//Подключение библиотек
+//РџРѕРґРєР»СЋС‡РµРЅРёРµ Р±РёР±Р»РёРѕС‚РµРє
 unit Unit1;
 
 interface
@@ -30,7 +30,7 @@ uses
  private
   Plus, Minus, Umnog, Podel: Tass; //...
   
- //Проверка на наличие библиотек в указаном месте 
+ //РџСЂРѕРІРµСЂРєР° РЅР° РЅР°Р»РёС‡РёРµ Р±РёР±Р»РёРѕС‚РµРє РІ СѓРєР°Р·Р°РЅРѕРј РјРµСЃС‚Рµ 
  procedure TForm1.FormCreate(Sender: TObject);
 var
 Hold:LongWord;
@@ -45,7 +45,7 @@ Hold:=LoadLibrary('DLLs/DLLDel.dll');
      if (Hold=0) then   Button16.Visible:=false;
 end;
 
-//Использование библиотек
+//РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ Р±РёР±Р»РёРѕС‚РµРє
 procedure TForm1.Button3Click(Sender: TObject);      
 var
 Handle:LongWord;
@@ -78,7 +78,7 @@ if edit1.Text<>'' then b:=strtofloat(edit1.Text);
  if edit1.Text<>'' then b:=strtofloat(edit1.Text);
  if b=0 then
  begin
- showmessage('Нельзя делить на ноль');
+ showmessage('РќРµР»СЊР·СЏ РґРµР»РёС‚СЊ РЅР° РЅРѕР»СЊ');
  edit1.Text:='';
  end
  else
@@ -93,7 +93,7 @@ end;
 end;
  except
 on EConvertError do begin
-showmessage('Ошибка');
+showmessage('РћС€РёР±РєР°');
 end;
 end;
 edit1.Text:=floattostr(d);
